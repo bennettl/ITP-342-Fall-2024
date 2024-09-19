@@ -130,6 +130,15 @@ struct VendingMachine {
     }
 }
 
+// 2 ways to deal with errors (throwable functions)
+
+
+// 1. Not handle it
+let vendingMachine1 = VendingMachine()
+let item = try! vendingMachine1.get(item: "water")
+print("i got \(item.name)")
+
+// 2 Handle it
 do {
     let vendingMachine1 = VendingMachine()
     let item = try vendingMachine1.get(item: "water")
@@ -140,7 +149,3 @@ do {
     // too bad, womp womp
 }
 
-
-let vendingMachine1 = VendingMachine()
-let item = try! vendingMachine1.get(item: "water")
-print("i got \(item.name)")
