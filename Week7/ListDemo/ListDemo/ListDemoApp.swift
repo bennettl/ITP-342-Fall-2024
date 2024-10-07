@@ -11,7 +11,11 @@ import SwiftUI
 struct ListDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StudentList(students: [
+                Student(name: "John Smith"),
+                Student(name: "Amy Smith"),
+                Student(name: "Sarah Anderson")
+            ])
         }
     }
 }

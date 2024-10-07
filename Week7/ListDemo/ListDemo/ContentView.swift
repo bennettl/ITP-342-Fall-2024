@@ -7,15 +7,25 @@
 
 import SwiftUI
 
+extension String : Identifiable {
+    public var id: String {
+        self
+    }
+}
+
 struct ContentView: View {
+    
+    let settings = ["General", "Wifi", "Airplane Mode"]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        List(settings, rowContent: { setting in
+            Text(setting)
+        })
+//        List(content: {
+//            Text("General")
+//            Text("Wi-Fi")
+//            Text("Airplane Mode")
+//        })
+
     }
 }
 

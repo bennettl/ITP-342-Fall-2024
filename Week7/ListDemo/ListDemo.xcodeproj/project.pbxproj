@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4D71F6712CAE3091004FF987 /* StudentDeletableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71F6702CAE3091004FF987 /* StudentDeletableList.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4D71F65D2CAE26E5004FF987 /* ListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D71F6702CAE3091004FF987 /* StudentDeletableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDeletableList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		4D71F6542CAE26E5004FF987 = {
 			isa = PBXGroup;
 			children = (
+				4D71F6702CAE3091004FF987 /* StudentDeletableList.swift */,
 				4D71F65F2CAE26E5004FF987 /* ListDemo */,
 				4D71F65E2CAE26E5004FF987 /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D71F6712CAE3091004FF987 /* StudentDeletableList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
