@@ -7,8 +7,22 @@
 
 import Foundation
 
-struct Quote: Identifiable {
-    let id : UUID = UUID()
+struct Quote: Identifiable, Hashable, Codable {
+    let id : UUID
     let message: String
     let author: String
+
+    init(id: UUID, message: String, author: String) {
+        self.id = id
+        self.message = message
+        self.author = author
+    }
+
+    init(message: String, author: String) {
+        self.id = UUID()
+        self.message = message
+        self.author = author
+    }
 }
+
+

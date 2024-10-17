@@ -7,22 +7,18 @@
 
 import SwiftUI
 
-struct QuoteCell: View {
-    let quote: Quote
-    var body: some View {
-        VStack (alignment: .leading) {
-            Text(quote.message)
-            Text(quote.author)
-                .font(.subheadline)
-        }
-    }
-}
 
 struct QuotesListPage: View {
     let quotes: [Quote]
     var body: some View {
-        List(quotes) {
-            QuoteCell(quote: $0)
+        NavigationStack {
+            List(quotes) {
+                QuoteCell(quote: $0)
+            }
+            .navigationTitle("Quotes")
+            .navigationDestination(for: Quote.self) { quote in
+                QuoteEditPage(quote: quote)
+            }
         }
     }
 }

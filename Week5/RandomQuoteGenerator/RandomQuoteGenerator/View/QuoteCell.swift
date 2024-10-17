@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct QuoteCell: View {
+    let quote: Quote
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(value: quote) {
+            VStack (alignment: .leading) {
+                Text(quote.message)
+                Text(quote.author)
+                    .font(.subheadline)
+            }
+        }
     }
 }
 
 #Preview {
-    QuoteCell()
+    QuoteCell(quote: QuoteViewModel().quotes.first!)
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RandomQuotePage: View {
-    @StateObject var quoteViewModel = QuoteViewModel()
+    @EnvironmentObject var quoteViewModel: QuoteViewModel
 
     var body: some View {
 
